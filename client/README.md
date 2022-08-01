@@ -1,1 +1,1 @@
-## The client side of helsinki-bike-app
+# The client side of helsinki-bike-app
