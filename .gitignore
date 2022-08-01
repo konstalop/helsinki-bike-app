@@ -14,7 +14,7 @@ server/node_modules
 client/build
 .env
 server/.env
-data
+
 
 # misc
 .DS_Store
@@ -26,3 +26,5 @@ data
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+data
+server/data
