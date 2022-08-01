@@ -4,15 +4,35 @@ const mongoose = require('mongoose')
  * Database schema for city bike stations.
  */
 const stationSchema = mongoose.Schema({
-    stationId: {
+    id: {
         type: Number,
         required: true
     },
-    name: {
+    nameFi: {
         type: String,
         required: true
     },
-    address: {
+    nameSe: {
+        type: String,
+        required: true
+    },
+    nameEn : {
+        type: String,
+        required: true
+    },
+    addressFi: {
+        type: String,
+        required: true
+    },
+    addressSe: {
+        type: String,
+        required: true
+    },
+    cityFi: {
+        type: String,
+        required: true
+    },
+    citySe: {
         type: String,
         required: true
     },
@@ -23,7 +43,16 @@ const stationSchema = mongoose.Schema({
     capacity: {
         type: Number,
         required: true
+    },
+    coordX: {
+        type: Number,
+        required: true
+    },
+    coordY: {
+        type: Number,
+        required: true
     }
+
 })
 
 module.exports = mongoose.model('station', stationSchema)
