@@ -13,6 +13,7 @@ server/node_modules
 /build
 client/build
 .env
+server/.env
 data
 
 # misc
