@@ -13,11 +13,11 @@ const journeySchema = mongoose.Schema({
         required: true
     },
     departureStation: {
-        type: Schema.Types.ObjectId,
+        type: String,
         ref: 'station'
     },
     returnStation: {
-        type: Schema.Types.ObjectId,
+        type: String,
         ref: 'station'
     },
     distanceMeters: {

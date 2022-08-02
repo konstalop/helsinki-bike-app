@@ -1,0 +1,35 @@
+:root {
+    background-color: black;
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+/** Landing page CSS **/
+
+.landing-container, .journeys-container, .stations-container {
+    width: 100%;
+    text-align: center;
+}
+
+.landing-h1, .stations-h1, .journeys-h1 {
+    color: white;
+}
+
+.journeys-btn, .stations-btn {
+    width: 250px;
+    height: 120px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin: 15px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.journeys-btn:hover, .stations-btn:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
