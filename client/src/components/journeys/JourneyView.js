@@ -9,7 +9,7 @@ const JourneyView = () => {
 
     return (
         <div className='journeys-container'>
-            <h1 className='journeys-h1'>Helsinki City Bikes Journeys</h1>
+            <h1 className='journeys-h1'>Helsinki City Bike Journeys</h1>
             <div className='journeys-inner'>
                 <button 
                     className='new-item-btn'

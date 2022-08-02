@@ -1,10 +1,16 @@
 :root {
-    background-color: black;
+    --primary-color: #007ac9;
+    background-color: var(--primary-color);
 }
 
 html, input, button {
     font-family: 'Roboto', sans-serif;
 }
+
+i {
+    font-size: 18px;
+}
+
 
 /** NavBar styling**/
 
@@ -44,6 +50,7 @@ html, input, button {
     font-size: 13px;
 }
 
+
 /** Pages styling **/
 
 .landing-container, .journeys-container, .stations-container {
@@ -56,10 +63,14 @@ html, input, button {
     color: white;
 }
 
+.stations-h4 {
+    color: white;
+}
+
 .journeys-btn, .stations-btn, .new-item-btn, .confirm-btn, .cancel-btn {
     width: 250px;
     height: 120px;
-    background-color: black;
+    background-color: var(--primary-color);
     color: white;
     border: 1px solid white;
     border-radius: 10px;
@@ -73,24 +84,26 @@ html, input, button {
     cursor: pointer;
 }
 
-.journeys-table {
+
+.journeys-table, .stations-table {
     border: 1px solid white;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.th-journeys {
+.th-journeys, .th-stations {
     width: 5%;
     color: white;
     text-align: center;
     padding: 10px;
 }
 
-.td-journey-item {
+.td-journey-item, .td-station-item {
     text-align: center;
     color: white;
     padding: 7px;
+    font-weight: 600;
 }
 
 .new-item-btn {
@@ -110,7 +123,7 @@ html, input, button {
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.97);
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -118,18 +131,18 @@ html, input, button {
 }
 
 .create-journey-inner {
-    border: 1px solid white;
     position: relative;
     padding: 16px;
     width: 100%;
     max-width: 400px;
-    background-color: rgba(0, 0, 0, 0);
+    background-color:var(--primary-color);
     justify-content: center;
     align-items: left;
     border-radius: 10px;
     position:relative;
     position: absolute;
     top: 50px;
+    
 }
 
 .journey-label {
