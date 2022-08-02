@@ -2,7 +2,7 @@
     background-color: black;
 }
 
-html {
+html, input, button {
     font-family: 'Roboto', sans-serif;
 }
 
@@ -56,7 +56,7 @@ html {
     color: white;
 }
 
-.journeys-btn, .stations-btn {
+.journeys-btn, .stations-btn, .new-item-btn, .confirm-btn, .cancel-btn {
     width: 250px;
     height: 120px;
     background-color: black;
@@ -68,8 +68,95 @@ html {
     font-weight: 600;
 }
 
-.journeys-btn:hover, .stations-btn:hover {
+.journeys-btn:hover, .stations-btn:hover, .new-item-btn:hover, .confirm-btn:hover, .cancel-btn:hover {
     opacity: 0.8;
     cursor: pointer;
 }
+
+.journeys-table {
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.th-journeys {
+    width: 5%;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.td-journey-item {
+    text-align: center;
+    color: white;
+    padding: 7px;
+}
+
+.new-item-btn {
+    height: 60px;
+    margin-bottom: 25px;
+}
+
+/** Create journey styling **/
+
+.create-journey-h2 {
+    color: white;
+}
+
+.create-journey {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.97);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.create-journey-inner {
+    border: 1px solid white;
+    position: relative;
+    padding: 16px;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(0, 0, 0, 0);
+    justify-content: center;
+    align-items: left;
+    border-radius: 10px;
+    position:relative;
+    position: absolute;
+    top: 50px;
+}
+
+.journey-label {
+    display: block;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 600;
+    color: white;
+}
+
+.input-journey {
+    width: 350px;
+    font-weight: 700;
+    color: black;
+    margin: 5px;
+    font-size: 15px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0
+}
+
+.confirm-btn, .cancel-btn {
+    font-weight: 600;
+    width: 100px;
+    height: 50px;
+}
+
+
 
