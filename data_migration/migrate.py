@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 
 load_dotenv("../server/.env")
 
+#Setup, connect to db get databases etc.
+
 client = MongoClient(os.getenv("MONGODB_URI"))
 db = client.bikeapp
 db_journeys = db.journeys
@@ -17,6 +19,8 @@ csv_station_files = ['../data/stations.csv']
 
 journeys = []
 stations = []
+
+#Handle importing stations
 
 print('Working on stations')
 
@@ -42,6 +46,8 @@ for each in reader_stations:
 print("Inserting stations to MongoDB")
 db_stations.insert_many(stations)
 
+# Handle importing journeys
+
 print('Working on journeys')
 
 for file in range(len(csv_journey_files)):
@@ -65,9 +71,3 @@ for file in range(len(csv_journey_files)):
 
 print("Inserting journeys to MongoDB (This may take a while)...")
 db_journeys.insert_many(journeys)
-
-
-
-
-
-
