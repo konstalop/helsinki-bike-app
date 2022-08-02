@@ -6,7 +6,45 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
-/** Landing page CSS **/
+/** NavBar styling**/
+
+.nav-container {
+    height: 30px;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-text {
+    color: white
+}
+
+
+.nav-text:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
+
+/** Footer styling **/
+
+.footer-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-text {
+    font-weight: 200;
+    font-size: 13px;
+}
+
+/** Pages styling **/
 
 .landing-container, .journeys-container, .stations-container {
     width: 100%;
@@ -14,6 +52,7 @@ html {
 }
 
 .landing-h1, .stations-h1, .journeys-h1 {
+    font-size: 35px;
     color: white;
 }
 
@@ -33,3 +72,4 @@ html {
     opacity: 0.8;
     cursor: pointer;
 }
+

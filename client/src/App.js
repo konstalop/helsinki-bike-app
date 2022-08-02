@@ -3,6 +3,8 @@ import './App.css';
 import LandingPage from "./components/landing/LandingPage"
 import JourneyView from './components/journeys/JourneyView';
 import StationView from './components/stations/StationView'
+import NavBar from './components/navigation/NavBar';
+import Footer from './components/navigation/Footer';
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,13 +16,13 @@ function App() {
   return (
     <>
     <Router>
-    <div className="app-container">
+      <NavBar/>
           <Routes>
             <Route path="/" element={<LandingPage/>} />
             <Route path="/journeys" element={<JourneyView/>} />
             <Route path="/stations" element={<StationView/>} />
           </Routes>
-    </div>
+      <Footer/>
     </Router>
     </>
   );
