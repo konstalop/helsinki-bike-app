@@ -1,6 +1,10 @@
 import React from 'react'
 import StationItem from './StationItem'
 
+/**
+ * Stations page to view, filter and search stations.
+ * @returns page for /stations
+ */
 const StationView = () => {
     return (
         <div className='stations-container'>

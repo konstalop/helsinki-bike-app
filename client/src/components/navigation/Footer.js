@@ -1,5 +1,9 @@
 import React from 'react'
 
+/**
+ * Footer to display creator and source code location.
+ * @returns footer component
+ */
 const Footer = () => {
 
     return (

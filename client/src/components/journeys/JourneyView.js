@@ -2,6 +2,11 @@ import React, {useState} from 'react'
 import JourneyItem from './JourneyItem'
 import Modal from '../dialog/Modal'
 import CreateJourney from './CreateJourney'
+
+/**
+ * Page to view, filter, search, add journeys
+ * @returns /journeys page
+ */
 const JourneyView = () => {
 
     const [popup, setPopup] = useState(false)

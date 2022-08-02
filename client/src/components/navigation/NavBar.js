@@ -1,5 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+
+/**
+ * Navigation bar to make navigating between pages easier.
+ * @returns NavBar component
+ */
 const NavBar = () => {
 
     const navigate = useNavigate()

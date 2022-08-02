@@ -1,5 +1,9 @@
 import React from 'react'
 
+/**
+ * Journey item which contains data for a single journey to be displayed in journeytable.
+ * @returns table row
+ */
 const JourneyItem = () => {
     return (
         <tr className='tr-journey-item'>

@@ -1,6 +1,10 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 
+/**
+ * Landing bike to select between journeys and stations.
+ * @returns landing page for bike app
+ */
 const LandingPage = () => {
 
     const navigate = useNavigate()

@@ -1,5 +1,10 @@
 import React from 'react'
 
+/**
+ * form to create a new journey
+ * @param {*} props 
+ * @returns create journey form
+ */
 const CreateJourney = (props) => {
 
     const handleSubmit = (e) => {
