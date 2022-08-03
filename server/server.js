@@ -16,7 +16,9 @@ console.log('Connected to MongoDB')).catch(err => console.error(err))
 
 console.log(mongoose.connection.collection)
 const journeyRouter = require('./routes/journeys')
+const stationRouter = require('./routes/stations')
 
 app.use('/journeys', journeyRouter)
+app.use('/stations', stationRouter)
 
 app.listen(PORT, () => console.log(`Server running at port ${PORT}`))

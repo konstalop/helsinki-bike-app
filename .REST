@@ -1,1 +1,5 @@
+##Test getting journey page
 GET http://localhost:5000/journeys?page=1
+
+###test getting station page
+GET http://localhost:5000/stations?page=1
