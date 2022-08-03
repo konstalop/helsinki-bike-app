@@ -3,6 +3,18 @@
     background-color: var(--primary-color);
 }
 
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
 html, input, button {
     font-family: 'Roboto', sans-serif;
 }
@@ -181,6 +193,11 @@ i {
     max-width: 100px;
     text-align: center;
     padding: 5px;
+    font-weight: 600;
+}
+
+.pg-input:focus {
+    outline: none;
 }
 
 .confirm-btn, .cancel-btn {

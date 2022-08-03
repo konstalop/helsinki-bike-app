@@ -76,7 +76,8 @@ const JourneyView = () => {
                 </button>
                 <input 
                     className='pg-input'
-                    value={pageNumber || ""}
+                    type='number'
+                    value={pageNumber+1}
                     onChange={wantedPage}
                 ></input>
                 <button 
