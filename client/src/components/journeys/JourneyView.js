@@ -34,6 +34,13 @@ const JourneyView = () => {
         setPageNumber(Math.max(0, pageNumber - 1))
     }
 
+    /**
+     * Get page with given number
+     */
+    const wantedPage = (e) => {
+        setPageNumber(Math.max(0, e.target.value))
+    }
+
     return (
         <div className='journeys-container'>
             <h1 className='journeys-h1'>Helsinki City Bike Journeys</h1>
@@ -67,6 +74,11 @@ const JourneyView = () => {
                     onClick={previousPage}>
                         <i className='fas fa-angle-left'></i>	
                 </button>
+                <input 
+                    className='pg-input'
+                    value={pageNumber || ""}
+                    onChange={wantedPage}
+                ></input>
                 <button 
                     className='next-btn'
                     onClick={nextPage}
