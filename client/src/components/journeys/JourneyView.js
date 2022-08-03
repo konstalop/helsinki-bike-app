@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import JourneyItem from './JourneyItem'
 import Modal from '../dialog/Modal'
 import CreateJourney from './CreateJourney'
+import axios from "axios"
 
 /**
  * Page to view, filter, search, add journeys
@@ -9,8 +10,29 @@ import CreateJourney from './CreateJourney'
  */
 const JourneyView = () => {
 
+    const [journeys, setJourneys] = useState([])
+    const [pageNumber, setPageNumber] = useState(0)
     const [popup, setPopup] = useState(false)
 
+
+    useEffect(() => {
+        const fetchJourneys = async () => {
+            const res = await axios.get(`/api/journeys?page=${pageNumber}`)
+            setJourneys(res.data)
+        }
+            fetchJourneys()
+    }, [pageNumber])
+
+
+   
+
+    const nextPage = () => {
+        setPageNumber(pageNumber + 1)
+    }
+
+    const previousPage = () => {
+        setPageNumber(Math.max(0, pageNumber - 1))
+    }
 
     return (
         <div className='journeys-container'>
@@ -33,9 +55,23 @@ const JourneyView = () => {
                             <th className='th-journeys'>Distance</th>
                             <th className='th-journeys'>Duration</th>
                         </tr>
-
+                    {
+                        journeys.map(journey => (
+                            <JourneyItem key={journey._id} journey={journey}/>
+                        ))
+                    }
                     </tbody>
                 </table>
+                <button 
+                    className='next-btn'
+                    onClick={previousPage}>
+                        <i className='fas fa-angle-left'></i>	
+                </button>
+                <button 
+                    className='next-btn'
+                    onClick={nextPage}
+                    ><i className='fas fa-angle-right'></i>	
+                </button>
                 <Modal
                     trigger={popup}
                     setTrigger={setPopup}

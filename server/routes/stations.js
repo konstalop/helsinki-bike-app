@@ -10,11 +10,8 @@ router.get('/', async (req, res) => {
         const page = parseInt(req.query.page || 0 )
 
         const stations = await Station.find({}).limit(SIZE)
-            .skip(SIZE * page)
-
-        res.json({
-            stations
-        })
+        .skip(SIZE * page)
+        res.send(stations)
 })
 
 module.exports = router

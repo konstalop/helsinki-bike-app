@@ -18,7 +18,7 @@ console.log(mongoose.connection.collection)
 const journeyRouter = require('./routes/journeys')
 const stationRouter = require('./routes/stations')
 
-app.use('/journeys', journeyRouter)
-app.use('/stations', stationRouter)
+app.use('/api/journeys', journeyRouter)
+app.use('/api/stations', stationRouter)
 
 app.listen(PORT, () => console.log(`Server running at port ${PORT}`))

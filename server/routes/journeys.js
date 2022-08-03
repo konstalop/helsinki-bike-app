@@ -8,13 +8,9 @@ let Journey = require('../models/journey')
 router.get('/', async (req, res) => {
         const SIZE = 10
         const page = parseInt(req.query.page || 0 )
-
         const journeys = await Journey.find({}).limit(SIZE)
             .skip(SIZE * page)
-
-        res.json({
-            journeys
-        })
+        res.send(journeys)
 })
 
 module.exports = router

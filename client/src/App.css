@@ -67,7 +67,7 @@ i {
     color: white;
 }
 
-.journeys-btn, .stations-btn, .new-item-btn, .confirm-btn, .cancel-btn {
+.journeys-btn, .stations-btn, .new-item-btn, .confirm-btn, .cancel-btn, .next-btn {
     width: 250px;
     height: 120px;
     background-color: var(--primary-color);
@@ -79,7 +79,7 @@ i {
     font-weight: 600;
 }
 
-.journeys-btn:hover, .stations-btn:hover, .new-item-btn:hover, .confirm-btn:hover, .cancel-btn:hover {
+.journeys-btn:hover, .stations-btn:hover, .new-item-btn:hover, .confirm-btn:hover, .cancel-btn:hover, .next-btn:hover {
     opacity: 0.8;
     cursor: pointer;
 }
@@ -109,6 +109,12 @@ i {
 .new-item-btn {
     height: 60px;
     margin-bottom: 25px;
+}
+
+.next-btn {
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
 }
 
 /** Create journey styling **/
