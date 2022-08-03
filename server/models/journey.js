@@ -30,4 +30,4 @@ const journeySchema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('journey', journeySchema)
+module.exports = mongoose.model('journeys', journeySchema)

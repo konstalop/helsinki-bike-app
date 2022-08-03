@@ -16,12 +16,13 @@ const JourneyView = () => {
         <div className='journeys-container'>
             <h1 className='journeys-h1'>Helsinki City Bike Journeys</h1>
             <div className='journeys-inner'>
+                <h4 className='stations-h4'>Click the journey for extra information!</h4>
                 <button 
                     className='new-item-btn'
                     onClick={() => setPopup(true)} 
                 >
                     New Journey
-                </button>
+                </button>         
                 <table className='journeys-table'>
                     <tbody>
                         <tr className='tr-journeys'>
@@ -32,19 +33,7 @@ const JourneyView = () => {
                             <th className='th-journeys'>Distance</th>
                             <th className='th-journeys'>Duration</th>
                         </tr>
-                        <JourneyItem></JourneyItem>
-                        <JourneyItem></JourneyItem>
-                        <JourneyItem></JourneyItem>
-                        <JourneyItem></JourneyItem>
-                        <JourneyItem></JourneyItem>
-                        <JourneyItem></JourneyItem>
-                        <JourneyItem></JourneyItem>
-                        <JourneyItem></JourneyItem>
-                        <JourneyItem></JourneyItem>
-                        <JourneyItem></JourneyItem>
-                        <JourneyItem></JourneyItem>
-                        <JourneyItem></JourneyItem>
-        
+
                     </tbody>
                 </table>
                 <Modal

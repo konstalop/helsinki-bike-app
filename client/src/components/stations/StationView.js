@@ -24,6 +24,11 @@ const StationView = () => {
                         <StationItem></StationItem>
                         <StationItem></StationItem>
                         <StationItem></StationItem>
+                        <StationItem></StationItem>
+                        <StationItem></StationItem>
+                        <StationItem></StationItem>
+                        <StationItem></StationItem>
+                        <StationItem></StationItem>
                     </tbody>
                 </table>
             </div>
