@@ -1,5 +1,8 @@
 ##Test getting journey page
-GET http://localhost:5000/api/journeys?page=1
+GET http://localhost:5000/api/journeys
 
 ###test getting station page
 GET http://localhost:5000/api/stations?page=1
+
+###Test stats api endpoint
+GET  http://localhost:5000/api/stats/

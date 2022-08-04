@@ -80,6 +80,15 @@ i {
     color: white;
 }
 
+.landing-h4 {
+    color: white;
+    font-size: 20px;
+}
+
+.landing-data-text {
+    color: white;
+}
+
 .journeys-btn, .stations-btn, .new-item-btn, .confirm-btn, .cancel-btn, .next-btn {
     width: 250px;
     height: 120px;
