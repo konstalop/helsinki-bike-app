@@ -22,10 +22,7 @@ const JourneyView = () => {
         }
             fetchJourneys()
     }, [pageNumber])
-
-
    
-
     const nextPage = () => {
         setPageNumber(pageNumber + 1)
     }
@@ -77,7 +74,7 @@ const JourneyView = () => {
                 <input 
                     className='pg-input'
                     type='number'
-                    value={pageNumber+1}
+                    value={pageNumber || ""}
                     onChange={wantedPage}
                 ></input>
                 <button 

@@ -105,8 +105,13 @@ i {
     margin-right: auto;
 }
 
+.stations-table {
+    margin: auto;
+}
+
+
 .th-journeys, .th-stations {
-    width: 5%;
+    width: 15%;
     color: white;
     text-align: center;
     padding: 10px;
@@ -118,6 +123,22 @@ i {
     padding: 7px;
     font-weight: 600;
 }
+
+.th-stations {
+    font-size: 20px;
+}
+
+.td-station-item {
+    padding: 10px;
+    font-size: 18px;
+}
+
+.td-station-item:hover {
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+
 
 .new-item-btn {
     height: 60px;
