@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import StationItem from './StationItem'
 import axios from 'axios'
+import Modal from '../dialog/Modal'
+import ViewSingleStation from './ViewSingleStation'
 
 /**
  * Stations page to view, filter and search stations.
@@ -10,6 +12,8 @@ const StationView = () => {
 
     const [pageNumber, setPageNumber] = useState(0)
     const [stations, setStations] = useState([])
+    const [popup, setPopup] = useState(false)
+    const [current, setCurrent] = useState()
 
     useEffect(() => {
         const fetchStations = async () => {
@@ -48,7 +52,7 @@ const StationView = () => {
                         </tr>
                     {
                         stations.map(station => (
-                            <StationItem key={station._id} station={station}/>
+                            <StationItem key={station._id} station={station} setPopup={setPopup} setCurrent={setCurrent}/>
                         ))
                     }
                     </tbody>
@@ -69,6 +73,16 @@ const StationView = () => {
                     onClick={nextPage}
                     ><i className='fas fa-angle-right'></i>	
                 </button>
+                <Modal
+                    trigger={popup}
+                    setTrigger={setPopup}
+                >
+                    <ViewSingleStation
+                    trigger={popup}
+                    setTrigger={setPopup}
+                    station={current}
+                    />
+                </Modal>
             </div>
         </div>
     )

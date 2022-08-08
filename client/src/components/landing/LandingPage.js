@@ -28,10 +28,9 @@ const LandingPage = () => {
             <div>
                 <button className='journeys-btn' onClick={() => navigate('/journeys')}>Journeys</button>
                 <button className='stations-btn' onClick={() => navigate('/stations')}>Stations</button>
-                <h4 className='landing-h4'>Database Stats</h4>
-                <p className='landing-data-text'>{stats.journeys} Journeys</p>
-                <p className='landing-data-text'>{stats.stations} Stations</p>
-                <p></p>
+                <h4 className='landing-h4'>Helsinki City Bikes in numbers!</h4>
+                <p className='landing-data-text'><strong>{stats.journeys}</strong> Journeys</p>
+                <p className='landing-data-text'><strong>{stats.stations}</strong> Stations</p>
             </div>
         </div>
     )

@@ -43,32 +43,17 @@ i {
     cursor: pointer;
 }
 
-/** Footer styling **/
-
-.footer-container {
-    margin-top: 1rem;
-    padding: 1rem;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    overflow: auto
-}
-
-.footer-text {
-    font-weight: 200;
-    font-size: 13px;
-}
-
 
 /** Pages styling **/
 
 .landing-container, .journeys-container, .stations-container {
     width: 100%;
     text-align: center;
+}
+
+.single-station-h2 {
+    color: white;
+    font: 20px;
 }
 
 .landing-h1, .stations-h1, .journeys-h1 {
@@ -89,7 +74,7 @@ i {
     color: white;
 }
 
-.journeys-btn, .stations-btn, .new-item-btn, .confirm-btn, .cancel-btn, .next-btn {
+.journeys-btn, .stations-btn, .new-item-btn, .confirm-btn, .cancel-btn, .next-btn, .done-btn {
     width: 250px;
     height: 120px;
     background-color: var(--primary-color);
@@ -101,13 +86,13 @@ i {
     font-weight: 600;
 }
 
-.journeys-btn:hover, .stations-btn:hover, .new-item-btn:hover, .confirm-btn:hover, .cancel-btn:hover, .next-btn:hover {
+.journeys-btn:hover, .stations-btn:hover, .new-item-btn:hover, .confirm-btn:hover, .cancel-btn:hover, .next-btn:hover, .done-btn:hover {
     opacity: 0.8;
     cursor: pointer;
 }
 
 
-.journeys-table, .stations-table {
+.journeys-table, .stations-table, .single-table {
     border: 1px solid white;
     border-radius: 10px;
     margin-left: auto;
@@ -119,14 +104,14 @@ i {
 }
 
 
-.th-journeys, .th-stations {
+.th-journeys, .th-stations, .single-th {
     width: 15%;
     color: white;
     text-align: center;
     padding: 10px;
 }
 
-.td-journey-item, .td-station-item {
+.td-journey-item, .td-station-item, .single-td {
     text-align: center;
     color: white;
     padding: 7px;
@@ -166,7 +151,7 @@ i {
     color: white;
 }
 
-.create-journey {
+.create-journey, .single-station-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -179,7 +164,7 @@ i {
     z-index: 1;
 }
 
-.create-journey-inner {
+.create-journey-inner, .single-station-inner {
     position: relative;
     padding: 16px;
     width: 100%;
@@ -192,6 +177,10 @@ i {
     position: absolute;
     top: 50px;
     
+}
+
+.single-station-inner {
+    max-width: 600px;
 }
 
 .journey-label {
@@ -230,11 +219,16 @@ i {
     outline: none;
 }
 
-.confirm-btn, .cancel-btn {
+.confirm-btn, .cancel-btn, .done-btn {
     font-weight: 600;
     width: 100px;
     height: 50px;
 }
 
+
+.single-th {
+    font-size: 19px;
+    max-width: 250px;
+}
 
 
