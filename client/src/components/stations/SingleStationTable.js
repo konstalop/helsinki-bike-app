@@ -7,6 +7,19 @@ import React from "react";
  */
 const SingleStationTable = ({station}) => {
 
+    let city
+    let operator = station.operator
+
+    if (station.operator === " ") {
+        operator = "Not specified!"
+    }
+
+    if (station.cityFI || station.citySe === " ") {
+        city = "Not specified!"
+    } else {
+        city = station.cityFi + ", " + station.citySe
+    }
+
     return (
         <table className="single-table">
             <tbody>
@@ -18,14 +31,14 @@ const SingleStationTable = ({station}) => {
                 <tr className="single-tr">
                     <td className="single-td">{station.nameFi + ", " + station.nameSe} </td>
                     <td className="single-td">{station.addressFi + ", " + station.addressSe}</td>
-                    <td className="single-td">{station.operator}</td>
+                    <td className="single-td">{operator}</td>
                 </tr>
                 <tr>    
                     <th className="single-th">City</th>
                     <th className="single-th">Capacity</th>
                 </tr>
                 <tr className="single-tr">
-                    <td className="single-td">{station.cityFi + ", " +station.citySe}</td>
+                    <td className="single-td">{city}</td>
                     <td className="single-td">{station.capacity}</td>
                 </tr>
             </tbody>

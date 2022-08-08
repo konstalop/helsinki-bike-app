@@ -6,10 +6,8 @@ import React from 'react'
  */
 const StationItem = ({station, setPopup, setCurrent}) => {
 
-    let operator = station.operator
-
     if (station.operator === ' ') {
-        operator = 'Not Specified!'
+        station.operator = 'Not specified!'
     }
 
     const handlePopup = () => {
@@ -21,7 +19,7 @@ const StationItem = ({station, setPopup, setCurrent}) => {
         <tr className='tr-station-item' onClick={handlePopup}>
             <td className='td-station-item'>{station.nameFi}</td>
             <td className='td-station-item'>{station.addressFi}</td>
-            <td className='td-station-item'>{operator}</td>
+            <td className='td-station-item'>{station.operator}</td>
         </tr>
     )
 }
