@@ -14,7 +14,7 @@ db = client.bikeapp
 db_journeys = db.journeys
 db_stations = db.stations
 
-csv_journey_files = ['../data/2021-05.csv', '../data/2021-06.csv', '../data/2021-07.csv']
+csv_journey_files = ['../data/2021-05.csv']
 csv_station_files = ['../data/stations.csv']
 
 journeys = []
@@ -53,8 +53,9 @@ print('Working on journeys')
 for file in range(len(csv_journey_files)):
     csv_journeys = open(csv_journey_files[file], 'r', encoding='utf-8-sig')
     reader_journey = csv.DictReader(csv_journeys)
+    rows = list(reader_journey)
     print("Reading file: " + csv_journey_files[file])
-    for each in reader_journey:
+    for each in reversed(rows):
 
         distance = each["Covered distance (m)"]
         duration = each["Duration (sec.)"]
@@ -63,8 +64,10 @@ for file in range(len(csv_journey_files)):
             journeys.append({
             "departureTime":each["Departure"],
             "returnTime":each["Return"],
-            "departureStation": each["Departure station id"],
-            "returnStation": each["Return station id"],
+            "departureStation": each["Departure station name"],
+            "departureStationId": each["Departure station id"],
+            "returnStation": each["Return station name"],
+            "returnStationId": each["Return station id"],
             "distance": distance,
             "duration": duration
             })
