@@ -1,4 +1,4 @@
-# Data migration for Helsinki City bikes
+# Data migration for Helsinki City Bikes
 
 This directory contains the python script for migrating data from .csv files to MongoDB.
 
