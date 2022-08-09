@@ -5,7 +5,9 @@ from dotenv import load_dotenv
 
 #Script used for data migration from .csv files to MongoDB
 
-load_dotenv("../server/.env")
+env_location = "../server/.env"
+
+load_dotenv(env_location)
 
 #Setup, connect to db get databases etc.
 

@@ -5,7 +5,7 @@ const ViewSingleStation = ({setTrigger, station}) => {
     return (
     <div className='single-station-container'>
         <div className='single-station-inner'>
-        <h2 className='single-station-h2'>Viewing station {station.nameFi}</h2>
+        <h2 className='single-station-h2'>Station {station.nameFi + " / " + station.nameSe}</h2>
         <SingleStationTable station={station}/>
         <StationMap station={station}/>
         <button

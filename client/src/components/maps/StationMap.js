@@ -1,40 +1,40 @@
 import React from "react"
 import GoogleMapReact from 'google-map-react'
 
-const Marker = ({text}) => {
+
+const Marker = () => {
   return (
-    <div className="marker-container" style={{textAlign: 'center'}}>
-    <img style= {{width: '20px', height: '30px', textAlign: 'center'}}src={require('./marker.png')}/>
+    <div className="marker-container">
+    <img style= {{width: '20px', height: '30px'}}src={require('./marker.png')}/>
     </div>
   )
 }
 
 const StationMap = ({station}) => {
-
-  console.log(station)
-
-
     const defaultProps = {
         center: {
           lat: station.coordY,
           lng: 	station.coordX
         },
-        zoom: 16
+        zoom: 15,
+        draggable: false
       };
 
     return (
-        <div style= {{width: '100%', height: '30vh', padding: '5px', textAlign: 'center'}}>
+        <div style= {{width: '90%', height: '30vh', padding: '10px', marginLeft:'auto', marginRight:'auto'}}>
             <GoogleMapReact
                 className="react-map"
                 bootstrapURLKeys={{key: process.env.GOOGLE_MAPS_API_KEY}}
                 defaultCenter={defaultProps.center}
-                defaultZoom={defaultProps.zoom}
-                
+                defaultZoom={defaultProps.zoom}        
+                options={{
+                  gestureHandling: 'none',
+                  zoomControl: false
+                }}        
             >
                   <Marker
                     lat={station.coordY}
                     lng={station.coordX}
-                    text={station.nameFi}
                     />
             </GoogleMapReact>
         </div>

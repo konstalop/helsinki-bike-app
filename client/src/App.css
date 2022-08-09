@@ -112,7 +112,7 @@ i {
     text-align: center;
     color: white;
     padding: 7px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .th-stations {
@@ -188,7 +188,7 @@ i {
 
 .input-journey {
     width: 350px;
-    font-weight: 700;
+    font-weight: 500;
     color: black;
     margin: 5px;
     font-size: 15px;
