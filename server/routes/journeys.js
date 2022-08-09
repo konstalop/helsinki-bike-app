@@ -15,7 +15,13 @@ router.get('/', async (req, res) => {
         }catch(err) {
             console.error(err)
         }
-        
+})
+
+/**
+ * API endpoint for creating a new journey
+ */
+router.post('/add', async (req, res) => {
+    
 })
 
 module.exports = router

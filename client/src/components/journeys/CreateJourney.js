@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 /**
  * form to create a new journey
@@ -7,8 +7,18 @@ import React from 'react'
  */
 const CreateJourney = (props) => {
 
+    const [journey, setJourney] = useState({
+        departureTime: "",
+        departureStation: "",
+        returnTime: "",
+        returnStation: "",
+        distance: "",
+        duration: ""
+    })
+
     const handleSubmit = (e) => {
         e.preventDefault()
+        props.setTrigger(false)
     }
 
     const handleCancel = (e) => {
@@ -24,6 +34,7 @@ const CreateJourney = (props) => {
         <form className='journey-form'>
             <label className='journey-label'>Departure Time
                 <input 
+                    name="departureTime"
                     type="text" 
                     className='input-journey'
                     placeholder='12:00'
@@ -31,6 +42,7 @@ const CreateJourney = (props) => {
             </label>
             <label className='journey-label'>Departure Station
                 <input 
+                    name="departureStation"
                     type="text" 
                     className='input-journey'
                     placeholder='Name of the station'
@@ -38,6 +50,7 @@ const CreateJourney = (props) => {
             </label>
             <label className='journey-label'>Return Time
                 <input 
+                    name="returnTime"
                     type="text" 
                     className='input-journey'
                     placeholder='12:15'
@@ -45,6 +58,7 @@ const CreateJourney = (props) => {
             </label>
             <label className='journey-label'>Return Station
                 <input 
+                    name="returnStation"
                     type="text" 
                     className='input-journey'
                     placeholder='Name of the station'
@@ -52,6 +66,7 @@ const CreateJourney = (props) => {
             </label>
             <label className='journey-label'>Distance (meters)
                 <input 
+                    name="distance"
                     type="text" 
                     className='input-journey'
                     placeholder='Distance in meters'
@@ -59,10 +74,12 @@ const CreateJourney = (props) => {
             </label>
             <label className='journey-label'>Duration (minutes)
                 <input 
+                    name="duration"
                     type="text" 
                     className='input-journey'
                     placeholder='Duration of journey in minutes'
-                    ></input>
+                    >
+                </input>
             </label>
             <button
                 className='cancel-btn'

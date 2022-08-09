@@ -48,13 +48,11 @@ const JourneyView = () => {
                     onClick={() => setPopup(true)} 
                 >
                     New Journey
-                </button>         
+                </button>       
                 <table className='journeys-table'>
                     <tbody>
                         <tr className='tr-journeys'>
-                            <th className='th-journeys'>Departure Time</th>
                             <th className='th-journeys'>Departure Station</th>
-                            <th className='th-journeys'>Return Time</th>
                             <th className='th-journeys'>Return Station</th>
                             <th className='th-journeys'>Distance</th>
                             <th className='th-journeys'>Duration</th>
