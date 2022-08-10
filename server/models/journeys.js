@@ -28,11 +28,11 @@ const journeySchema = mongoose.Schema({
         type: Number,
         ref: 'stations'
     },
-    distanceMeters: {
+    distance: {
         type: Number,
         required: true
     },
-    durationSeconds: {
+    duration: {
         type: Number,
         required: true
     }

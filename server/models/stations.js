@@ -6,17 +6,13 @@ const mongoose = require('mongoose')
 const stationSchema = mongoose.Schema({
     id: {
         type: Number,
-        required: true
+        required: true,
     },
     nameFi: {
         type: String,
         required: true
     },
     nameSe: {
-        type: String,
-        required: true
-    },
-    nameEn : {
         type: String,
         required: true
     },

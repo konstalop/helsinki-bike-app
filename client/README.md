@@ -1,1 +1,0 @@
-# The client side of Helsinki City Bikes app
