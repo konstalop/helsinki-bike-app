@@ -89,12 +89,12 @@ router.get('/:id', async (req,res) => {
 })
 
 router.get('/search/:name', async (req, res) => {
-
         const stationName = req.params.name
         const regex = new RegExp(stationName, 'i')
         const SIZE = 10
         try {
-                const stations = await Station.find({nameFi:  {$regex: regex}}).limit(SIZE)
+                const stations = await Station.find({nameFi:  {$regex: regex}})
+                .limit(SIZE)
                 res.send(stations)
         }catch(err) {
                 console.error(err)

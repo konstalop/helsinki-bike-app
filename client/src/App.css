@@ -47,7 +47,7 @@ i {
 
 /** Search styling **/
 
-.station-search {
+.station-search, .journey-search {
     margin: 10px;
     width: 350px;
     text-align: center;
@@ -55,6 +55,11 @@ i {
     border: 0;
     border-radius: 5px;
     font-size: 15px;
+}
+
+.journey-search {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
