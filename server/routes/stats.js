@@ -1,7 +1,7 @@
 const router = require('express').Router()
 
-let Station = require('../models/station')
-let Journey = require('../models/journey')
+let Station = require('../models/stations')
+let Journey = require('../models/journeys')
 
 router.get('/', async (req, res) => {
     try {

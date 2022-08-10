@@ -1,6 +1,6 @@
 const router = require('express').Router()
 
-let Journey = require('../models/journey')
+let Journey = require('../models/journeys')
 
 /**
  * API endpoint for journeyview, showing the next 10 journeys paginated.
@@ -21,7 +21,7 @@ router.get('/', async (req, res) => {
  * API endpoint for creating a new journey
  */
 router.post('/add', async (req, res) => {
-    
+
 })
 
 module.exports = router

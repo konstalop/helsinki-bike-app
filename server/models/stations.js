@@ -55,4 +55,4 @@ const stationSchema = mongoose.Schema({
 
 })
 
-module.exports = mongoose.model('station', stationSchema)
+module.exports = mongoose.model('stations', stationSchema)
