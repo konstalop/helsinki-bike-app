@@ -72,10 +72,10 @@ npm run dev
         - Average time and distance for ending/starting journeys
         - Number of ending/starting journeys
 - Journeys
-    - Has a list view of all journeys currently in the database.
-
-- Additional features
-    - UI to add new journeys
+    - Listing all journeys
+    - Pagination
+    - Searching by return and departure station. 
+        - View paginated list of search results
 
 ## Technologies used
 #### Client side

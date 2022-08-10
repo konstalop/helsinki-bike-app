@@ -5,7 +5,7 @@ import CreateJourney from './CreateJourney'
 import axios from "axios"
 
 /**
- * Page to view, filter, search, add journeys
+ * Page to view and search journeys
  * @returns /journeys page
  */
 const JourneyView = () => {
@@ -42,6 +42,11 @@ const JourneyView = () => {
         setSearch(e.target.value)
     }
 
+    /**
+     * Handle fetching journeys by given search condition.
+     * Empty search = fetch all
+     * @param {String} name station name
+     */
     const fetchJourneys = async (name) => {
         if (name.trim() === "") {
             try {

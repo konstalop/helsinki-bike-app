@@ -24,6 +24,9 @@ router.post('/add', async (req, res) => {
 
 })
 
+/**
+ * API endpoint for searching journeys
+ */
 router.get('/search/:name', async (req, res) => {
 
     const stationName = req.params.name
