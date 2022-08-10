@@ -2,15 +2,12 @@
 
 This is a full stack web application to display data of Helsinki City Bike journeys and stations. Made as a pre-assignment for [Solita Dev Academy](https://www.solita.fi/en/academy/) during August 2022.
 
-:heavy_exclamation_mark:The app currently uses only 1 dataset of journeys containing a little over 785 000 entries.:heavy_exclamation_mark:
-
 
 ## Requirements
-- Node (Built with version 16.13.2)
-- Git
-- Python3 for data migration
-    - See full details of data migration in the data_migration folder README.
-## Install and migrate data in 5 steps
+- [Node](https://nodejs.org/en/) (Built with version 16.13.2)
+- [Git](https://git-scm.com/)
+- [Python](https://www.python.org/) for data migration
+## Installation
 
 #### 1. Start by cloning this repository
 
@@ -33,7 +30,7 @@ Run this command in the root of the client folder and the server folder.
 ```
 npm install
 ```
-#### 5. Run the app
+#### 5. Run he app
 You can launch the app by running the following command in the root of the server.
 ```
 npm run dev
@@ -46,7 +43,6 @@ npm run dev
 - Imported to MongoDB from .csv files using python.
 - Correct types for data entries.
 - Journeys lasting less than 10 seconds or covering less than 10 meters are not imported to MongoDB.
-- 
 
 ### Application
 
@@ -68,7 +64,24 @@ npm run dev
 - Additional features
     - UI to add new journeys
 
-## Live demo 
+## Technologies used
+- Client side
+    - React
+    - CSS
+    - JavaScript
+    - Google Maps API
+    - Axios
+- Server side
+    - NodeJS
+    - Express
+    - Mongoose
+- Data
+    - Python
+    - MongoDB
+    - .csv files
+
+
+## Live Demo 
 
 Link coming here when project is deployed.
 

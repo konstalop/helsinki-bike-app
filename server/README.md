@@ -3,6 +3,7 @@ Server side is made using NodeJS, MongoDB, express.js and mongoose.
 
 ## MongoDB schemas
 These schemas can be found in the `./models` folder.
+
 ### Journeys
 
 | Field              | Type   | Required |   
