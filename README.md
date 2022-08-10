@@ -2,6 +2,19 @@
 
 This is a full stack web application to display data of Helsinki City Bike journeys and stations. Made as a pre-assignment for [Solita Dev Academy](https://www.solita.fi/en/academy/) during August 2022.
 
+## Table of contents
+
+1. [Requirements](#requirements)
+2. [Installation](#installation)
+3. [Functionalities](#functionalities)
+    1. [Data](#data)
+    2. [Application](#application)
+4. [Technologies Used](#technologies-used)
+    1. [Client side](#client-side)
+    2. [Server side](#server-side)
+    3. [Data](#data-1)
+5. [Live Demo](#live-demo)
+
 
 ## Requirements
 - [Node](https://nodejs.org/en/) (Built with version 16.13.2)
@@ -65,20 +78,20 @@ npm run dev
     - UI to add new journeys
 
 ## Technologies used
-- Client side
-    - React
-    - CSS
-    - JavaScript
-    - Google Maps API
-    - Axios
-- Server side
-    - NodeJS
-    - Express
-    - Mongoose
-- Data
-    - Python
-    - MongoDB
-    - .csv files
+#### Client side
+- React
+- CSS
+- JavaScript
+- Google Maps API
+- Axios
+#### Server side
+ - NodeJS
+ - Express
+ - Mongoose
+#### Data
+- Python
+- MongoDB
+- .csv files
 
 
 ## Live Demo 
