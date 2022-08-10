@@ -32,7 +32,7 @@ print('Reading stations')
 
 for each in reader_stations:
     stations.append({
-        "id":each["ID"],
+        "id":int(each["ID"]),
         "nameFi":each["Nimi"],
         "nameSe":each["Namn"],
         "addressFi":each["Osoite"],
@@ -40,9 +40,9 @@ for each in reader_stations:
         "cityFi":each["Kaupunki"],
         "citySe":each["Stad"],
         "operator":each["Operaattor"],
-        "capacity":each["Kapasiteet"],
-        "coordX":each["x"],
-        "coordY":each["y"]
+        "capacity":int(each["Kapasiteet"]),
+        "coordX":float(each["x"]),
+        "coordY":float(each["y"])
     })
 
 print("Inserting stations to MongoDB")
@@ -67,11 +67,11 @@ for file in range(len(csv_journey_files)):
             "departureTime":each["Departure"],
             "returnTime":each["Return"],
             "departureStation": each["Departure station name"],
-            "departureStationId": each["Departure station id"],
+            "departureStationId": int(each["Departure station id"]),
             "returnStation": each["Return station name"],
-            "returnStationId": each["Return station id"],
-            "distance": distance,
-            "duration": duration
+            "returnStationId": int(each["Return station id"]),
+            "distance": float(distance),
+            "duration": int(duration)
             })
 
 print("Inserting journeys to MongoDB (This may take a while)...")
