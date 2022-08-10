@@ -20,6 +20,32 @@ i {
     font-size: 18px;
 }
 
+.loading-h3 {
+    font-weight: 300;
+    color: white;
+    margin-bottom: 40px;
+}
+
+#loading {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+}
+
+
+
 
 /** NavBar styling**/
 
@@ -34,12 +60,10 @@ i {
     color: white
 }
 
-
 .nav-text:hover {
     opacity: 0.9;
     cursor: pointer;
 }
-
 
 /** Pages styling **/
 
@@ -50,7 +74,7 @@ i {
 
 .single-station-h2 {
     color: white;
-    font: 20px;
+    font: 28px;
 }
 
 .landing-h1, .stations-h1, .journeys-h1 {
@@ -89,11 +113,20 @@ i {
 }
 
 
-.journeys-table, .stations-table, .single-table {
+.journeys-table, .stations-table, .single-table, .single-table-stats {
     border: 1px solid white;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.single-table {
+    border: 0;
+}
+
+.single-table-stats {
+    border: 0;
+    margin-top: 10px;
 }
 
 .stations-table {
@@ -124,7 +157,7 @@ i {
     font-size: 18px;
 }
 
-.td-station-item:hover, .td-journey-item:hover {
+.td-station-item:hover {
     cursor: pointer;
     opacity: 0.9;
 }
@@ -175,7 +208,7 @@ i {
 }
 
 .single-station-inner {
-    max-width: 600px;
+    max-width: 800px;
 }
 
 .journey-label {
@@ -222,8 +255,9 @@ i {
 
 
 .single-th {
+    font-weight: 500;
     font-size: 19px;
-    max-width: 250px;
+    max-width: 350px;
 }
 
 

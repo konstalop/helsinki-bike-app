@@ -6,3 +6,6 @@ GET http://localhost:5000/api/stations?page=1
 
 ###Test stats api endpoint
 GET  http://localhost:5000/api/stats/
+
+###Test getting stats about journeys/stations
+GET http://localhost:5000/api/stations/1

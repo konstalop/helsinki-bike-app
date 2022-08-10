@@ -42,7 +42,6 @@ const JourneyView = () => {
         <div className='journeys-container'>
             <h1 className='journeys-h1'>Helsinki City Bike Journeys</h1>
             <div className='journeys-inner'>
-                <h4 className='stations-h4'>Click the journey for extra information!</h4>
                 <button 
                     className='new-item-btn'
                     onClick={() => setPopup(true)} 
@@ -53,7 +52,9 @@ const JourneyView = () => {
                     <tbody>
                         <tr className='tr-journeys'>
                             <th className='th-journeys'>Departure Station</th>
+                            <th className='th-journeys'>Departure Time</th>
                             <th className='th-journeys'>Return Station</th>
+                            <th className='th-journeys'>Return Time</th>
                             <th className='th-journeys'>Distance</th>
                             <th className='th-journeys'>Duration</th>
                         </tr>

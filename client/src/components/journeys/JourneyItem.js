@@ -10,19 +10,14 @@ const JourneyItem = ({journey}) => {
     const distanceKm = journey.distance / 1000 + "km"
 
     const departureDate = new Date(journey.departureTime).toLocaleString('en-GB')
-    const returnTime = new Date(journey.returnTime).toLocaleString('en-GB')
-
-    /**
-     * View a single journey data
-     */
-    const handleViewingJourney = () => {
-        
-    }
+    const returnDate = new Date(journey.returnTime).toLocaleString('en-GB')
 
     return (
-        <tr className='tr-journey-item' onClick={handleViewingJourney}>
+        <tr className='tr-journey-item'>
             <td className='td-journey-item'>{journey.departureStation}</td>
+            <td className='td-journey-item'>{departureDate}</td>
             <td className='td-journey-item'>{journey.returnStation}</td>
+            <td className='td-journey-item'>{returnDate}</td>
             <td className='td-journey-item'>{distanceKm}</td>
             <td className='td-journey-item'>{minutesDuration}</td>
         </tr>

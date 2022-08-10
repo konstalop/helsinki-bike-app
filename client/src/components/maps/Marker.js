@@ -7,7 +7,7 @@ import React from 'react'
  const Marker = () => {
     return (
       <div className="marker-container">
-      <img style= {{width: '20px', height: '30px'}}src={require('./marker.png')}/>
+      <img style= {{width: '20px', height: '30px'}}src={require('./marker.png')} alt="marker"/>
       </div>
     )
 }

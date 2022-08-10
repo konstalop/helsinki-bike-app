@@ -3,7 +3,12 @@ import React from "react";
 const SingleStationStats = ({stats, station}) => {
 
     if (stats === undefined) {
-        return <p>Loading</p>
+        return (
+         <>
+        <h3 className="loading-h3">Getting stats for {station.nameFi}</h3>
+        <div id="loading"></div>
+        </>
+       )
     }
 
     return (
