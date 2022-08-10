@@ -6,7 +6,9 @@
   "scripts": {
     "watch": "nodemon server.js",
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm start --prefix ../client",
+    "dev": "concurrently \"npm run watch\" \"npm run client\""
   },
   "author": "Konsta",
   "license": "MIT",
@@ -18,6 +20,7 @@
     "mongoose": "^6.5.0"
   },
   "devDependencies": {
+    "concurrently": "^7.3.0",
     "nodemon": "^2.0.19"
   }
 }

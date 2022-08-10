@@ -104,4 +104,4 @@ Link coming here when project is deployed.
 
 This is just for development. Helps me to keep track of things to do.
 
-E2E testing, write READMEs for client and backend, deploy
+E2E testing, deploy

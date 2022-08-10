@@ -36,8 +36,7 @@ router.get('/:id', async (req,res) => {
     }catch(err) {
         console.error(err)
     }
-    
-    console.log(stationId)
+
 
     //Avg distance
     try {
@@ -88,6 +87,9 @@ router.get('/:id', async (req,res) => {
     })
 })
 
+/**
+ * API endpoint to search stations
+ */
 router.get('/search/:name', async (req, res) => {
         const stationName = req.params.name
         const regex = new RegExp(stationName, 'i')

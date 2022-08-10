@@ -15,6 +15,7 @@ const JourneyView = () => {
     const [popup, setPopup] = useState(false)
     const [search, setSearch] = useState("")
 
+
     useEffect(() => {
             fetchJourneys(search)
     }, [pageNumber, search])

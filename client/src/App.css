@@ -259,7 +259,7 @@ i {
     font-weight: 600;
 }
 
-.pg-input:focus, .input-journey:focus, .station-search {
+.pg-input:focus, .input-journey:focus, .station-search:focus, .journey-search:focus {
     outline: none;
 }
 
