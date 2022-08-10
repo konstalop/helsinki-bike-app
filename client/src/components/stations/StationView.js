@@ -15,11 +15,12 @@ const StationView = () => {
     const [popup, setPopup] = useState(false)
     const [current, setCurrent] = useState()
 
+    const fetchStations = async () => {
+        const res = await axios.get(`/api/stations?page=${pageNumber}`)
+        setStations(res.data)
+    }
+
     useEffect(() => {
-        const fetchStations = async () => {
-            const res = await axios.get(`/api/stations?page=${pageNumber}`)
-            setStations(res.data)
-        }
             fetchStations()
     }, [pageNumber])
 
@@ -38,11 +39,37 @@ const StationView = () => {
         setPageNumber(Math.max(0, e.target.value))
     }
 
+    const handleSearch = (e) => {
+        e.preventDefault()
+        fetchSearch(e.target.value)
+    }
+
+    const fetchSearch = async (name) => {
+        console.log(name)
+        if (name.trim() === "") {
+            fetchStations()
+        } else {
+            try {
+                const res = await axios.get(`/api/stations/search/${name}`)
+                setStations(res.data)
+            }catch(err) {
+                console.error(err)
+            } 
+        }
+    }
+
     return (
         <div className='stations-container'>
             <h1 className='stations-h1'>Helsinki City Bike Stations</h1>
             <div>
                 <h4 className='stations-h4'>Click the station for extra information!</h4>
+                <input
+                    name="search"
+                    className='station-search'
+                    type="search"
+                    placeholder='Search by a station name'
+                    onChange={handleSearch}
+                />
                 <table className='stations-table'>
                     <tbody>
                         <tr className='tr-stations'>

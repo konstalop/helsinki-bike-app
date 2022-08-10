@@ -7,7 +7,7 @@ let Journey = require('../models/journeys')
  * API endpoint for stationview, showing the next 10 stations paginated.
  */
 router.get('/', async (req, res) => {
-        const SIZE = 5
+        const SIZE = 10
         const page = parseInt(req.query.page || 0 )
 
         try {
@@ -86,9 +86,19 @@ router.get('/:id', async (req,res) => {
         avgTimeStart: avgTimeStart,
         avgTimeEnd: avgTimeEnd
     })
+})
 
-    
-    
+router.get('/search/:name', async (req, res) => {
+
+        const stationName = req.params.name
+        const regex = new RegExp(stationName, 'i')
+        const SIZE = 10
+        try {
+                const stations = await Station.find({nameFi:  {$regex: regex}}).limit(SIZE)
+                res.send(stations)
+        }catch(err) {
+                console.error(err)
+        }
 })
 
 

@@ -18,9 +18,8 @@ const ViewSingleStation = ({setTrigger, station}) => {
             const res = await axios.get(`/api/stations/${station.id}`)
             setStats(res.data)
         }
-            fetchAverages()
-            
-    }, [])
+            fetchAverages()        
+    }, [station])
     return (
     <div className='single-station-container'>
         <div className='single-station-inner'>
