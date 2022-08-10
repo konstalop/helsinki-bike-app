@@ -12,24 +12,45 @@ This is a full stack web application to display data of Helsinki City Bike journ
     - See full details of data migration in the data_migration folder README.
 ## How to install
 
-Get started by creating the following .env file in the root of the project
+Start by cloning this repository
 
 ```
-PORT=5000 
-MONGODB_URI= YOUR MONGODB URI HERE
-DB_NAME= YOUR DB NAME HERE, DEFAULT IS "bikeapp"
+git clone https://github.com/konstalop/helsinki-bike-app
 ```
 
-Full instructions coming soon
-## Features of the app
+Then follow these instructions to install the server and the client.
+
+### [Server side installation](https://github.com/konstalop/helsinki-bike-app/tree/main/server)
+
+### [Client side installation](https://github.com/konstalop/helsinki-bike-app/tree/main/client)
+
+
+## Functionalities
+
+### Data
+- Imported to MongoDB from .csv files using python.
+- Correct types for data entries.
+- Journeys lasting less than 10 seconds or covering less than 10 meters are not imported to MongoDB.
+
+### Application
 
 - Landing page
+    - Switch between stations and journey view
     - Shows general data of Helsinki City Bikes
-- Stations:
-    - Has a list view of all stations
-    - You can click a station on the list to view more details of it.
+- Stations
+    - Listing all stations
+    - Pagination
+    - Searching
+    - Single station view
+        - General information about the station
+        - Location on map
+        - Average time and distance for ending/starting journeys
+        - Number of ending/starting journeys
 - Journeys
     - Has a list view of all journeys currently in the database.
+
+- Additional features
+    - UI to add new journeys
 
 ## Live demo 
 
@@ -41,4 +62,4 @@ Link coming here when project is deployed.
 
 This is just for development. Helps me to keep track of things to do.
 
-E2E testing, write READMEs for client and backend, show avg stuff on stations, deploy
+E2E testing, write READMEs for client and backend, deploy
