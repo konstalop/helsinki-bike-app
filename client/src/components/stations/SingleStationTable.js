@@ -5,7 +5,7 @@ import React from "react";
  * @param {Object} station station to be viewed
  * @returns Station table
  */
-const SingleStationTable = ({station}) => {
+const SingleStationTable = ({station, stats}) => {
 
     let city
     let operator = station.operator
@@ -21,6 +21,7 @@ const SingleStationTable = ({station}) => {
     }
 
     return (
+        <>
         <table className="single-table">
             <tbody>
                 <tr className="single-tr">
@@ -37,6 +38,7 @@ const SingleStationTable = ({station}) => {
                 </tr>
             </tbody>
         </table>
+        </>
     )
 }
 
