@@ -64,28 +64,18 @@ The app has two main tests: E2E and API endpoint tests.
 ### Testing API endpoints
 Done with jest & supertest
 
-#### Install jest & supertest in ./server folder
-```
-npm install --save-dev jest supertest
-```
+Install jest & supertest in ./server folder with  `npm install --save-dev jest supertest`
 
-#### Run test suites
-```
-npx jest
-```
+Run test suites with `npx jest`
 
 ### Running E2E tests
 These tests are created with cypress.
 
-#### Install cypress in ./client folder
-```
-npm install --save-dev cypress
-```
+Install cypress in ./client folder with `npm install --save-dev cypress`
 
-#### Running tests
-In terminal with `npm run cy:run`
+Run tests in terminal with `npm run cy:run`
 
-Or use cypress browser with `npx cypress open`
+Run tests in cypress browser with `npx cypress open`
 
 
 ## Features
