@@ -27,6 +27,8 @@ router.get('/:id', async (req,res) => {
     
     const stationId = Number(req.params.id)
 
+    if (isNaN(stationId)) return res.sendStatus(400)
+
     let startCount, endCount, avgDistanceStart, avgDistanceEnd, avgTimeStart, avgTimeEnd
 
     //Count journeys

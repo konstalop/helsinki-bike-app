@@ -7,7 +7,6 @@ describe("GET /api/journeys", () => {
         const response = await request(`http://localhost:${process.env.PORT}/api/journeys`).get('/').query({page: 0})
         expect(response.statusCode).toBe(200)
     })
-
     test('response should be in json', async () => {
         const response = await request(`http://localhost:${process.env.PORT}/api/journeys`).get('/').query({page: 0})
         expect(response.headers['content-type']).toEqual(expect.stringContaining("json"))

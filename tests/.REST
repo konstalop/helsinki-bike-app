@@ -1,10 +1,10 @@
 ### Used by a VSCODE extensions to quickly test API endpoints and get responses.
 
 ##Test getting journey page
-GET http://localhost:5000/api/journeys
+GET http://localhost:5000/api/journeys?page=2
 
 ###test getting station page
-GET http://localhost:5000/api/stations?page=1
+GET http://localhost:5000/api/stations?page=n634634
 
 ###Test stats api endpoint
 GET  http://localhost:5000/api/stats/

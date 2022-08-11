@@ -27,5 +27,9 @@ describe("GET /api/stations", () => {
         const response = await request(`http://localhost:${process.env.PORT}/api/stations`).get('/1')
         expect(response.headers['content-type']).toEqual(expect.stringContaining("json"))
     })
+    test('if id is not a number', async () => {
+        const response = await request(`http://localhost:${process.env.PORT}/api/stations`).get('/GG')
+        expect(response.statusCode).toBe(400)
+    })
 })
 
