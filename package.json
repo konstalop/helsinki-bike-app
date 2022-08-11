@@ -10,7 +10,8 @@
     "test": "cd server && npx jest",
     "dev": "cd server && npm run dev",
     "heroku-postbuild":" cd client && npm install && npm run build",
-    "start": "cd server && npm start"
+    "start": "cd server && npm start",
+    "install": "cd server && npm install"
   },
   "repository": {
     "type": "git",
