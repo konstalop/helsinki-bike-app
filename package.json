@@ -1,0 +1,24 @@
+{
+  "name": "helsinki-bike-app",
+  "version": "1.0.0",
+  "description": "HSL-City-Bikes",
+  "main": "../server/server.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "cd server && npx jest",
+    "dev": "cd server && npm run dev",
+    "heroku-postbuild":" cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konstalop/helsinki-bike-app.git"
+  },
+  "author": "konsta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/konstalop/helsinki-bike-app/issues"
+  },
+  "homepage": "https://github.com/konstalop/helsinki-bike-app#readme"
+}
