@@ -44,7 +44,7 @@ Run this command in the root of the client folder and the server folder.
 ```
 npm install
 ```
-#### 5. Run he app
+#### 5. Run the app
 You can launch the app by running the following command in the root of the server.
 ```
 npm run dev
