@@ -15,6 +15,8 @@ This is a full stack web application to display data of Helsinki City Bike journ
     1. [Client side](#client-side)
     2. [Server side](#server-side)
     3. [Data](#data-1)
+    4. [Testing](#testing-1)
+    5. [Deployment](#deployment)
 
 
 ## Live Demo 
@@ -56,9 +58,13 @@ npm run dev
 ```
 
 ## Testing
-Testing is done with jest & supertest for backend.
 
-#### Install jest & supertest
+The app has two main tests: E2E and API endpoint tests.
+
+### Testing API endpoints
+Done with jest & supertest
+
+#### Install jest & supertest in ./server folder
 ```
 npm install --save-dev jest supertest
 ```
@@ -68,33 +74,55 @@ npm install --save-dev jest supertest
 npx jest
 ```
 
+### Running E2E tests
+These tests are created with cypress.
 
-## Functionalities
+#### Install cypress in ./client folder
+```
+npm install --save-dev cypress
+```
+
+#### Running tests
+In terminal with `npm run cy:run`
+
+Or use cypress browser with `npx cypress open`
+
+
+## Features
 
 ### Data
-- Imported to MongoDB from .csv files using python.
+- Imported from .csv files to MongoDB.
 - Correct types for data entries.
-- Journeys lasting less than 10 seconds or covering less than 10 meters are not imported to MongoDB.
+- Journeys lasting less than 10 seconds not imported.
+- Journeys covering less than 10 meters not imported.
 
 ### Application
 
-- Landing page
-    - Switch between stations and journey view
-    - Shows general data of Helsinki City Bikes
-- Stations
-    - Listing all stations
-    - Pagination
-    - Searching
-    - Single station view
-        - General information about the station
-        - Location on map
-        - Average time and distance for ending/starting journeys
-        - Number of ending/starting journeys
-- Journeys
+- Journeys list view
     - Listing all journeys
     - Pagination
-    - Searching by return and departure station. 
-        - View paginated list of search results
+    - Searching / filtering by return and departure station
+        - Browse a paginated list of journeys filtered by return / departure station
+
+- Stations list view
+    - Listing all stations
+    - Pagination
+    - Searching by name
+
+- Single station view
+     - General information about the station
+     - Location on map
+     - Number of ending/starting journeys
+     - Average time for ending/starting journeys
+     - Average distance for ending/starting journeys
+
+- Additional
+    - Home page
+        - Allows user to choose between stations or journeys
+        - Displays general information about Helsinki City Bikes
+    - Running whole application in cloud
+    - E2E tests
+    - API endpoint tests
 
 ## Technologies used
 #### Client side
@@ -116,6 +144,7 @@ npx jest
 - Jest
 - Supertest
 - .REST client
+- Cypress
 
 #### Deployment
 - Heroku
