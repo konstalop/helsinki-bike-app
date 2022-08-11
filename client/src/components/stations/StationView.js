@@ -85,7 +85,7 @@ const StationView = () => {
                     </tbody>
                 </table>
                 <button 
-                    className='next-btn'
+                    className='previous-btn'
                     onClick={previousPage}>
                         <i className='fas fa-angle-left'></i>	
                 </button>

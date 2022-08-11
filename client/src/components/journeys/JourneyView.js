@@ -94,8 +94,9 @@ const JourneyView = () => {
                     }
                     </tbody>
                 </table>
-                <button 
-                    className='next-btn'
+                <button
+                    id='previous-btn' 
+                    className='previous-btn'
                     onClick={previousPage}>
                         <i className='fas fa-angle-left'></i>	
                 </button>
@@ -106,6 +107,7 @@ const JourneyView = () => {
                     onChange={wantedPage}
                 ></input>
                 <button 
+                    id='next-btn'
                     className='next-btn'
                     onClick={nextPage}
                     ><i className='fas fa-angle-right'></i>	
