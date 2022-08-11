@@ -107,6 +107,11 @@ npx jest
 - MongoDB
 - .csv files
 
+#### Testing
+- Jest
+- Supertest
+- .REST client
+
 
 ## Live Demo 
 

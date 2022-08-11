@@ -1,6 +1,11 @@
 # Server side of Helsinki City Bikes
 Server side is made using NodeJS, MongoDB, express.js and mongoose.
 
+## Scripts
+Run only server with `npm run watch`
+
+Run tests with `npx jest`
+
 ## MongoDB schemas
 These schemas can be found in the `./models` folder.
 
