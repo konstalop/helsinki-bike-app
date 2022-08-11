@@ -3,6 +3,9 @@ const router = require('express').Router()
 let Station = require('../models/stations')
 let Journey = require('../models/journeys')
 
+/**
+ * Stats about city bikes
+ */
 router.get('/', async (req, res) => {
     try {
             const countJourneys = await Journey.count()

@@ -10,7 +10,6 @@ const LandingPage = () => {
 
     const [stats, setStats] = useState(0)
 
-
     useEffect(() => {
         const fetchCount = async () => {
             const res = await axios.get('/api/stats')

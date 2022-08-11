@@ -18,13 +18,6 @@ router.get('/', async (req, res) => {
 })
 
 /**
- * API endpoint for creating a new journey
- */
-router.post('/add', async (req, res) => {
-
-})
-
-/**
  * API endpoint for searching journeys
  */
 router.get('/search/:name', async (req, res) => {

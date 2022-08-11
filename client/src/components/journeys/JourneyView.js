@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import JourneyItem from './JourneyItem'
 import Modal from '../dialog/Modal'
-import CreateJourney from './CreateJourney'
 import axios from "axios"
 
 /**
@@ -12,7 +11,6 @@ const JourneyView = () => {
 
     const [journeys, setJourneys] = useState([])
     const [pageNumber, setPageNumber] = useState(0)
-    const [popup, setPopup] = useState(false)
     const [search, setSearch] = useState("")
 
 
@@ -112,14 +110,6 @@ const JourneyView = () => {
                     onClick={nextPage}
                     ><i className='fas fa-angle-right'></i>	
                 </button>
-                <Modal
-                    trigger={popup}
-                    setTrigger={setPopup}
-                >
-                    <CreateJourney
-                    trigger={popup}
-                    setTrigger={setPopup}/>
-                </Modal>
                 </div>
         </div>
     )
