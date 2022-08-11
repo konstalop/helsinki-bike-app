@@ -1,4 +1,4 @@
-### Used by a VSCODE extensions to quickly test API endpoints.
+### Used by a VSCODE extensions to quickly test API endpoints and get responses.
 
 ##Test getting journey page
 GET http://localhost:5000/api/journeys
@@ -13,4 +13,4 @@ GET  http://localhost:5000/api/stats/
 GET http://localhost:5000/api/stations/1
 
 ###Test searching journeys
-GET http://localhost:5000/api/journeys/search/arabiankatu?page=1
+GET http://localhost:5000/api/journeys/search/kamppi?page=1

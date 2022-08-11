@@ -6,14 +6,15 @@ This is a full stack web application to display data of Helsinki City Bike journ
 
 1. [Requirements](#requirements)
 2. [Installation](#installation)
-3. [Functionalities](#functionalities)
+3. [Testing](#testing)
+4. [Functionalities](#functionalities)
     1. [Data](#data)
     2. [Application](#application)
-4. [Technologies Used](#technologies-used)
+5. [Technologies Used](#technologies-used)
     1. [Client side](#client-side)
     2. [Server side](#server-side)
     3. [Data](#data-1)
-5. [Live Demo](#live-demo)
+6. [Live Demo](#live-demo)
 
 
 ## Requirements
@@ -47,6 +48,19 @@ npm install
 You can launch the app by running the following command in the root of the server.
 ```
 npm run dev
+```
+
+## Testing
+Testing is done with jest & supertest for backend.
+
+#### Install jest & supertest
+```
+npm install --save-dev jest supertest
+```
+
+#### Run test suites
+```
+npx jest
 ```
 
 

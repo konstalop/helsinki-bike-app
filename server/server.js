@@ -24,3 +24,4 @@ app.use('/api/stations', stationRouter)
 app.use('/api/stats', statsRouter)
 
 app.listen(PORT, () => console.log(`Server running at port ${PORT}`))
+

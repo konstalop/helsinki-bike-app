@@ -34,7 +34,7 @@ router.get('/:id', async (req,res) => {
         startCount = await Journey.countDocuments({departureStationId: stationId})
         endCount = await Journey.countDocuments({returnStationId: stationId})
     }catch(err) {
-        console.error(err)
+        console.error('Error in count' + err)
     }
 
 
@@ -54,7 +54,7 @@ router.get('/:id', async (req,res) => {
                 }}}
         ])
     }catch(err) {
-        console.error(err)
+        console.error('Error in avgDistance ' + err)
     }
 
     //Avg time
@@ -73,7 +73,7 @@ router.get('/:id', async (req,res) => {
                 }}}
         ])
     }catch(err) {
-        console.error(err)
+        console.error('Error in avg time ' + err)
     }
 
 
