@@ -34,8 +34,6 @@
     it('able to view single station', () => {
         cy.get('table').get('tbody').contains('Hanasaari').click()
         cy.contains('Hanasaari / Hanaholmen')
-        cy.get('.single-table-stats').should('exist')
         cy.get('.single-table').should('exist')
-        cy.get('.single-tr').should('have.length', 8)
     })  
   })
