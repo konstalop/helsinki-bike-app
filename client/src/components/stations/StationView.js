@@ -45,12 +45,15 @@ const StationView = () => {
     }
 
     const fetchSearch = async (name) => {
-        console.log(name)
-        if (name.trim() === "") {
+
+        const notAllowed =  /["§%()\[\]{}=\\?´`\\*/\\'#<>|,;.:+_-]+/g
+        const cleanName = name.replace(notAllowed, "")
+
+        if (cleanName.trim() === "") {
             fetchStations()
         } else {
             try {
-                const res = await axios.get(`/api/stations/search/${name}`)
+                const res = await axios.get(`/api/stations/search/${cleanName}`)
                 setStations(res.data)
             }catch(err) {
                 console.error(err)

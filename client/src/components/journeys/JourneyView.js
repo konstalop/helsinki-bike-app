@@ -46,7 +46,12 @@ const JourneyView = () => {
      * @param {String} name station name
      */
     const fetchJourneys = async (name) => {
-        if (name.trim() === "") {
+
+        const notAllowed =  /["§%()\[\]{}=\\?´`\\*/\\'#<>|,;.:+_-]+/g
+
+        const cleanName = name.replace(notAllowed, "")
+
+        if (cleanName.trim() === "") {
             try {
                 const res = await axios.get(`/api/journeys?page=${pageNumber}`)
                 setJourneys(res.data)
@@ -55,7 +60,8 @@ const JourneyView = () => {
             }
         } else {
             try {
-                const res = await axios.get(`/api/journeys/search/${name}?page=${pageNumber}`)
+                console.log(cleanName)
+                const res = await axios.get(`/api/journeys/search/${cleanName}?page=${pageNumber}`)
                 setJourneys(res.data)
             }catch(err) {
                 console.error(err)
@@ -71,7 +77,7 @@ const JourneyView = () => {
                     name="search"
                     className='journey-search'
                     placeholder='Search by a return or departure station'
-                    type="search"
+                    type="text"
                     onChange={handleSearch}
                 />      
                 <table className='journeys-table'>
