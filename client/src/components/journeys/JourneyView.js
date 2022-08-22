@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import JourneyItem from './JourneyItem'
-import Modal from '../dialog/Modal'
 import axios from "axios"
 
 /**

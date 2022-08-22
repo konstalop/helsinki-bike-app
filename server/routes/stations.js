@@ -93,8 +93,12 @@ router.get('/:id', async (req,res) => {
  * API endpoint to search stations
  */
 router.get('/search/:name', async (req, res) => {
+
+        const notAllowed =  /["§%()\[\]{}=\\?´`\\*'#<>|,;.:+_-]+/g
         const stationName = req.params.name
-        const regex = new RegExp(stationName, 'i')
+
+        const cleanStationName = stationName.replace(notAllowed, "")
+        const regex = new RegExp(cleanStationName, 'i')
         const SIZE = 10
         try {
                 const stations = await Station.find({nameFi:  {$regex: regex}})
