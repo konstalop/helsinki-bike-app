@@ -4,14 +4,13 @@ This is a full stack web application to display data of Helsinki City Bike journ
 
 ## Table of contents
 
-1. [Live Demo](#live-demo)
-2. [Requirements](#requirements)
-3. [Installation](#installation)
-4. [Testing](#testing)
-5. [Functionalities](#functionalities)
+1. [Requirements](#requirements)
+2. [Installation](#installation)
+3. [Testing](#testing)
+4. [Functionalities](#functionalities)
     1. [Data](#data)
     2. [Application](#application)
-6. [Technologies Used](#technologies-used)
+5. [Technologies Used](#technologies-used)
     1. [Client side](#client-side)
     2. [Server side](#server-side)
     3. [Data](#data-1)
