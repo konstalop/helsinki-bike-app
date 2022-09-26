@@ -19,11 +19,6 @@ This is a full stack web application to display data of Helsinki City Bike journ
     5. [Deployment](#deployment)
 
 
-## Live Demo 
-
-https://hsl-city-bikes.herokuapp.com/
-
-
 ## Requirements
 - [Node](https://nodejs.org/en/) (Built with version 16.13.2)
 - [Git](https://git-scm.com/)
